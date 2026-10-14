@@ -2,7 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Анкета</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прохожие</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,3 +20,87 @@
             <li><a href="./algebraic_problem.html">Считаем выручку</a></li>
         </ul>
     </nav>
+
+    <!-- ТАБЛИЦА ПО ЗАДАНИЮ -->
+    <table border="5" cellspacing="15" cellpadding="10"
+           bgcolor="#cccccc" background="background.png" bordercolor="red"
+           style="width: 100%; max-width: 1600px; margin: 0 auto;">
+
+        <!-- РЯД 1: три ячейки -->
+        <tr height="150">
+            <td valign="top" align="right" width="250">
+                <img src="micro_1.png" height="60" alt="Протез"><br>
+                <span class="caption">Протез клапана</span>
+            </td>
+            <td></td>
+            <td width="200" background="cover_1.png" valign="middle" align="center">
+                <span class="on-bg">Митральный клапан</span>
+            </td>
+        </tr>
+
+        <!-- РЯД 2: объединённая ячейка -->
+        <tr height="30">
+            <td colspan="3" bgcolor="#999999"></td>
+        </tr>
+
+        <!-- РЯД 3: левая + правая объединённая (colspan="2") -->
+        <tr>
+            <td width="400" height="350" valign="top">
+                <h2>Анатомия и проблемы</h2>
+                <a id="anatomy"></a>
+                <p class="purple small thin gravity">Митральный клапан расположен между левым предсердием и левым желудочком. Патология клапана — одна из самых частых заболеваний сердечно-сосудистой системы.</p>
+                <p class="purple small thin gravity">Традиционная открытая операция требует полного рассечения грудной клетки и искусственного кровообращения.</p>
+                <p class="purple small thin gravity">РЕКЛАМНОЕ ОБЪЯВЛЕНИЕ! <a href="https://hsedesign.ru/account/alvercreate" target="_blank">Кликните сюда,</a> не пожалеете!</p>
+            </td>
+            <td colspan="2" background="cover_2.png" valign="middle" align="center">
+                <span class="on-bg">Масштаб проблемы</span>
+            </td>
+        </tr>
+
+        <!-- РЯД 4: левая + правая объединённая (colspan="2") -->
+        <tr height="400">
+            <td valign="top">
+                <table border="5" width="100%" cellpadding="0" cellspacing="0">
+                    <colgroup>
+                        <col width="50%">
+                        <col width="50%">
+                    </colgroup>
+                    <tr height="250">
+                        <td style="padding: 20px;">
+                            <img src="micro_2.png" width="100%" height="200" alt="Пожилой пациент" style="object-fit: cover;">
+                        </td>
+                        <td align="center" valign="middle" background="cover_3.png">
+                            <span class="on-bg">Безопасность</span>
+                        </td>
+                    </tr>
+                    <tr height="100">
+                        <td align="center" valign="middle">
+                            <p>Восстановление</p>
+                        </td>
+                        <td align="center" valign="middle">
+                            <p>Качество жизни</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan="2" align="right" valign="top" style="padding: 0;">
+                <img src="div_1.png" alt="Счастливый пациент"
+                     style="display: block; width: 100%; height: 100%; object-fit: cover;">
+            </td>
+        </tr>
+
+        <!-- РЯД 5: две ячейки — "Новые возможности" + объединённая "Преимущества и Результат" -->
+        <tr height="150">
+            <td background="div_2.png" valign="middle" align="center" style="min-height: 150px;">
+                <span class="on-bg">Новые возможности</span>
+            </td>
+            <!-- ← colspan="2": объединяет 2-ю и 3-ю колонки -->
+            <td colspan="2" background="game_over.png" valign="middle" align="center" style="min-height: 150px;">
+                <span class="on-bg">Преимущества и Результат</span>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
