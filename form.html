@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Меню -->
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li><a href="./Passport.html">Паспорт взломщика</a></li>
+            <li><a href="./Location.html">Игровая локация</a></li>
+            <li><a href="./Howtohack.html">Способы взлома</a></li>
+            <li><a href="./Strangers.html">Прохожие</a></li>
+            <li><a href="./form.html" class="active">Заказать игрушки</a></li>
+            <li><a href="./index.html">Навигация</a></li>
+            <li><a href="./algebraic_problem.html">Считаем выручку</a></li>
+        </ul>
+    </nav>
+
+    <form action="https://www.bing.com/search" method="GET" id="UserEnter" name="UserEnter" target="_blank">
+
+        <!-- скрытое поле: отправится, но не показывается пользователю -->
+        <input type="hidden" name="form_type" value="toy_vendetta_order">
+        <input type="hidden" name="source" value="form.html">
+
+        <div class="content-container center-text">
+
+            <p>Поисковый запрос: <input type="text" name="q" size="40" value=""></p>
+
+            <p>Фамилия: <input type="text" name="last_name" size="20" value="Неизвестно"></p>
+            <p>Имя:     <input type="text" name="first_name" size="20" value="Неизвестно"></p>
+            <p>Возраст: <input type="number" name="age" size="20" value="0"></p>
+
+            <p>Место проживания:
+                <input type="radio" name="place" value="Moscow">Москва
+                <input type="radio" name="place" value="Nizhny" checked>Нижний
+            </p>
+
+            <p><b>Каким браузером в основном пользуетесь:</b><br>
+                <input type="radio" name="browser" value="ie"> Internet Explorer<br>
+                <input type="radio" name="browser" value="opera"> Opera<br>
+                <input type="radio" name="browser" value="firefox"> Firefox<br>
+            </p>
+
+            <p>Комментарий<br>
+                <textarea name="comment" cols="100" rows="10"></textarea>
+            </p>
+
+            <p>Стаж работы:
+                <input type="checkbox" name="experience" value="10" checked>Маркетологом — 10
+                <input type="checkbox" name="experience" value="20" checked>Экономистом — 20
+                <input type="checkbox" name="experience" value="30" checked>Менеджером — 30
+            </p>
+
+            <p>Знание английского
+                <select name="languages">
+                    <option value="Владею свободно">Владею свободно</option>
+                    <option value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</option>
+                </select>
+            </p>
+
+            <p>Мобильный телефон: <input type="tel" name="phone" size="20" placeholder="+7 (___) ___-__-__"></p>
+            <p>Электронная почта: <input type="email" name="email" size="30" placeholder="example@mail.ru"></p>
+
+            <p>Дата отправления данных: <input type="date" name="user_date" value="2024-10-02"></p>
+            <p>Уровень: <input type="range" name="range" value="50"></p>
+            <p>Пароль: <input type="password" name="password" size="9" value="123"></p>
+
+            <p>Укажите температуру в градусах Цельсия:
+                <input type="number" name="temperature" min="-50" max="50" value="20">
+            </p>
+
+            <!-- кнопки теперь ВНУТРИ формы — они сработают -->
+            <div class="content-row">
+                <div>
+                    <p><input type="submit" value="Отправить"></p>
+                </div>
+                <div>
+                    <p><input type="reset" value="Очистить"></p>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</body>
+</html>

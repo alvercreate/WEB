@@ -1,0 +1,318 @@
+/* базовые настройки */
+body {
+    margin: 0;
+    font-family: 'Verdana', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 70px;
+}
+
+/* шрифты */
+@font-face {
+    font-family: 'tagtype';
+    src: url('tagtype.ttf');
+}
+@font-face {
+    font-family: 'gravity';
+    src: url('gravity.ttf');
+}
+
+.tagtype { font-family: 'tagtype', sans-serif; }
+.gravity { font-family: 'gravity', sans-serif; }
+
+/* цвета и размеры */
+.purple { color: #FFE2FA; }
+.pink   { color: rgb(247, 39, 129); }
+
+.big {
+    font-size: 100px;
+    margin-bottom: 40px;   /* ← отступ снизу */
+}
+.middle { font-size: 35px; }
+.small  { font-size: 18px; }
+
+.bold { font-weight: 700; }
+.thin { font-weight: 100; }
+
+/* навигационная панель */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFE2FA;
+    box-shadow: 0 2px 5px #3F398B;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    gap: 5px;
+}
+
+.navbar-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #3F398B;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    background-color: #3F398B;
+    color: #FFE2FA;
+}
+
+.navbar-nav a.active {
+    background-color: #3F398B;
+    color: #FFE2FA;
+}
+
+/* заголовки и параграфы */
+h1 {
+    margin-top: 3px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+h3 {
+    margin-top: 3px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+p.tagtype {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* контейнер контента */
+.content-container {
+    width: 740px;    /* ← ширина ровно 600px, не больше и не меньше */
+    margin: 0 auto 30px auto;
+    padding: 30px;
+    background-color: #FFE2FA; /* запасной цвет */
+    background-size: cover;        /* картинка растянута по размеру блока */
+    background-position: center;   /* выравнивание по центру */
+    background-repeat: no-repeat;  /* не повторять плиткой */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* компенсация отступов у детей */
+.content-container h1,
+.content-container h3,
+.content-container p {
+    margin-left: 0;
+}
+
+/* текст внутри контейнера должен быть тёмным, а не сливаться с фоном */
+.content-container .purple {
+    color: #3F398B;
+}
+
+/* списки внутри контейнера — с маркерами и отступом (для дивов) */
+.content-container ul,
+.content-container ol {
+    padding-left: 20px;
+    list-style-position: inside;
+}
+
+/* списки внутри дивов, где текст центрируется */
+.content-container.center-text ul {
+    list-style-type: disc;
+}
+.content-container.center-text ol {
+    list-style-type: decimal;
+}
+
+/* небольшие отступы между пунктами списка в дивах */
+.content-container li {
+    margin-bottom: 5px;
+}
+
+/* поля ввода */
+.content-container textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #FFE2FA;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.content-container input[type="number"],
+.content-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #FFE2FA;
+    border-radius: 4px;
+}
+
+.content-container input[type="button"] {
+    padding: 8px 15px;
+    background-color: #3F398B;
+    color: #FFE2FA;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.content-container input[type="button"]:hover {
+    background-color: #3F398B;
+    .content-container {
+    width: 600px;    /* ← ширина ровно 600px, не больше и не меньше */
+}
+}
+
+/* списки на странице (вне контейнеров) */
+ul, ol {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    list-style-position: inside;
+}
+
+/* центрирование текста вне контейнеров */
+body > h1,
+body > p,
+body > ul,
+body > ol {
+    text-align: center;
+}
+
+body > ul,
+body > ol {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+body > h1,
+body > p {
+    margin-left: 0;
+}
+
+/* блок со ссылкой (текст или картинка) */
+.link-block {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-bottom: 30px;   /* ← отступ снизу */
+}
+
+/* ссылка */
+.highlight {
+    color: #FFE2FA;
+    text-decoration: none;
+    font-size: 60px;
+    font-family: 'tagtype', sans-serif;
+}
+
+.highlight:hover {
+    color: rgb(247, 39, 129);
+}
+
+/* картинка-ссылка */
+.preview-img {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.preview-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* два блока в одну строку */
+.content-row {
+    display: flex;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    align-items: flex-start;
+}
+
+.content-row .content-container {
+    flex: 1;
+    margin: 0;
+    max-width: none;
+}
+
+/* на узких экранах — блоки в столбик */
+@media (max-width: 700px) {
+    .content-row {
+        flex-direction: column;
+    }
+}
+
+/* выравнивание текста по центру внутри дива */
+.center-text {
+    text-align: center;
+}
+
+img {
+    max-width: 500px;    /* ← уменьшение: не больше 500px по ширине */
+    width: 100%;         /* сжимается, если экран уже 500px */
+    height: auto;        /* пропорции сохраняются */
+    display: block;      /* убирает зазор под картинкой */
+    margin: 20px auto;   /* ← центрирование по горизонтали + отступы сверху/снизу */
+}
+
+/* див с картинкой */
+.img-block {
+    display: flex;
+    flex-direction: column;         /* картинка сверху, подпись снизу */
+    align-items: center;            /* центрируем по горизонтали */
+    text-align: center;
+    margin: 30px auto;              /* отступы сверху/снизу + центрирование по горизонтали */
+    max-width: 500px;               /* ограничение ширины дива */
+}
+
+/* картинка-ссылка */
+.img-block-img {
+    width: 100%;                    /* растягивается по ширине дива */
+    max-width: 400px;               /* ← максимальная ширина картинки, меняй */
+    height: auto;                   /* пропорции сохраняются */
+    display: block;
+    border-radius: 10px;            /* скругление углов */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* эффект при наведении */
+.img-block-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* подпись под картинкой */
+.img-block-caption {
+    margin: 10px 0 0 0;             /* отступ от картинки */
+    font-size: 20px;                /* ← размер шрифта */
+    color: #FFE2FA;                 /* ← цвет текста */
+    font-family: 'gravity', sans-serif;  /* ← шрифт */
+    font-weight: 500;
+    line-height: 1.2;
+}
