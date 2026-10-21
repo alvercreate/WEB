@@ -7,7 +7,6 @@
 </head>
 <body>
 
-    <!-- Меню -->
     <nav class="navbar">
         <ul class="navbar-nav">
             <li><a href="./Passport.html">Паспорт взломщика</a></li>
@@ -22,9 +21,6 @@
 
     <h1 class="pink big thin tagtype" style="text-align: center; font-size: 60px;">Оформление заказа</h1>
 
-    <!-- ========================================== -->
-    <!-- ФОРМА 1: ЛИЧНЫЕ КОНТАКТНЫЕ ДАННЫЕ          -->
-    <!-- ========================================== -->
     <div class="content-container center-text" style="margin-bottom: 50px;">
         <h3 class="purple middle thin gravity">Шаг 1: Ваши контактные данные</h3>
         
@@ -38,8 +34,9 @@
             
             <p>Мобильный телефон: <input type="tel" name="phone" size="20" placeholder="+7 (___) ___-__-__" required></p>
             <p>Электронная почта: <input type="email" name="email" size="30" placeholder="example@mail.ru" required></p>
+            <p>Группа: <input type="text" name="group" required></p>
             
-            <p>Дата отправки данных: <input type="date" name="user_date" value="2024-10-02" required></p>
+            <p>Дата отправки данных: <input type="date" name="user_date" value="" required></p>
 
             <p style="margin-top: 20px;">
                 <input type="submit" value="Сохранить контакты">
@@ -47,9 +44,6 @@
         </form>
     </div>
 
-    <!-- ========================================== -->
-    <!-- ФОРМА 2: ОРИГИНАЛЬНЫЕ ДАННЫЕ (ЗАКАЗ)       -->
-    <!-- ========================================== -->
     <div class="content-container center-text" style="margin-bottom: 50px;">
         <h3 class="purple middle thin gravity">Шаг 2: Параметры заказа</h3>
 
@@ -72,13 +66,11 @@
                 </select>
             </p>
 
-            <!-- Оригинальные данные 3: Пожелания к доставке -->
             <p>Способ доставки:
                 <input type="radio" name="delivery" value="pickup"> Самовывоз из перехода
                 <input type="radio" name="delivery" value="drone" checked> Доставка курьером
             </p>
 
-            <!-- Оригинальные данные 4: Отзыв -->
             <p>Ваши пожелания или отзыв<br>
                 <textarea name="comment" cols="80" rows="5" placeholder="Напишите, какую игрушку вы бы хотели видеть в автомате..."></textarea>
             </p>
