@@ -6,7 +6,8 @@
     <title>Прохожие</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<!-- Применяем шрифт gravity ко всему body -->
+<body class="gravity">
 
     <!-- Меню -->
     <nav class="navbar">
@@ -21,82 +22,81 @@
         </ul>
     </nav>
 
-    <!-- ТАБЛИЦА ПО ЗАДАНИЮ -->
+    <!-- ТАБЛИЦА -->
+    <!-- Убрал bgcolor="#cccccc" и добавил background-size: cover для фона самой таблицы -->
     <table border="5" cellspacing="15" cellpadding="10"
-           bgcolor="#cccccc" background="background.png" bordercolor="red"
-           style="width: 100%; max-width: 1600px; margin: 0 auto;">
+           style="width: 100%; max-width: 1600px; margin: 0 auto; border-color: rgb(247, 39, 129); background-image: url('background.png'); background-size: cover; background-attachment: fixed;">
 
         <!-- РЯД 1: три ячейки -->
         <tr height="150">
             <td valign="top" align="right" width="250">
-                <img src="micro_1.png" height="60" alt="Протез"><br>
-                <span class="caption">Протез клапана</span>
+                <img src="strangers_2.jpg" height="60" alt="">
             </td>
-            <td></td>
-            <td width="200" background="cover_1.png" valign="middle" align="center">
-                <span class="on-bg">Митральный клапан</span>
+            <td valign="top" align="right" width="250"
+            style="background-image: url('strangers_4.png'); background-size: cover; background-position: center;">
+            </td>
+            <td width="200" valign="middle" align="center" 
+                style="background-image: url('div_1.png'); background-size: cover; background-position: center;">
+                 <p class="small thin purple">РЕКЛАМНОЕ ОБЪЯВЛЕНИЕ!</p>
+                    <a href="https://hsedesign.ru/account/alvercreate" target="_blank" style="color: rgb(247, 39, 129); font-weight: bold;">Кликните сюда!</a></p>
+                <p class="small thin purple">Не пожалеете!</p>
             </td>
         </tr>
 
-        <!-- РЯД 2: объединённая ячейка -->
-        <tr height="30">
-            <td colspan="3" bgcolor="#999999"></td>
-        </tr>
-
-        <!-- РЯД 3: левая + правая объединённая (colspan="2") -->
+        <!-- РЯД 3: левая + правая объединённая -->
         <tr>
             <td width="400" height="350" valign="top">
-                <h2>Анатомия и проблемы</h2>
+                <h2 class="pink">Грабят!</h2>
                 <a id="anatomy"></a>
-                <p class="purple small thin gravity">Митральный клапан расположен между левым предсердием и левым желудочком. Патология клапана — одна из самых частых заболеваний сердечно-сосудистой системы.</p>
-                <p class="purple small thin gravity">Традиционная открытая операция требует полного рассечения грудной клетки и искусственного кровообращения.</p>
-                <p class="purple small thin gravity">РЕКЛАМНОЕ ОБЪЯВЛЕНИЕ! <a href="https://hsedesign.ru/account/alvercreate" target="_blank">Кликните сюда,</a> не пожалеете!</p>
+                <p class="small thin purple">По подземке ходят прохожие.</p>
+                <p class="small thin purple">Отслеживай их приближение по звукам. Если они приближаются, останови взлом и отойди, чтобы не вызвать у них тревогу.</p>
+                <p class="small thin purple">У прохожих, видевших тебя за взломом, повысится уровень тревожности. Увиденный инструмент повышает тревожность.</p>
             </td>
-            <td colspan="2" background="cover_2.png" valign="middle" align="center">
-                <span class="on-bg">Масштаб проблемы</span>
+
+            <td colspan="2" valign="middle" align="center" 
+                style="background-image: url('strangers_5.jpg'); background-size: cover; background-position: center;">
+                <p class="small thin purple">Менты!</p>
             </td>
         </tr>
 
-        <!-- РЯД 4: левая + правая объединённая (colspan="2") -->
+        <!-- РЯД 4: левая + правая объединённая -->
         <tr height="400">
             <td valign="top">
-                <table border="5" width="100%" cellpadding="0" cellspacing="0">
+                <table border="0" width="100%" cellpadding="0" cellspacing="0">
                     <colgroup>
                         <col width="50%">
                         <col width="50%">
                     </colgroup>
                     <tr height="250">
-                        <td style="padding: 20px;">
-                            <img src="micro_2.png" width="100%" height="200" alt="Пожилой пациент" style="object-fit: cover;">
+                        <td style="background-image: url('strangers.png'); background-size: cover; background-position: center;">
                         </td>
-                        <td align="center" valign="middle" background="cover_3.png">
-                            <span class="on-bg">Безопасность</span>
+                        <td align="center" valign="middle" 
+                            style="background-image: url('strangers_3.jpg'); background-size: cover; background-position: center;">
                         </td>
                     </tr>
                     <tr height="100">
                         <td align="center" valign="middle">
-                            <p>Восстановление</p>
+                            <p class="small thin purple">Скрывайся...</p>
                         </td>
                         <td align="center" valign="middle">
-                            <p>Качество жизни</p>
+                            <p class="small thin purple">Не выдавай себя...</p>
                         </td>
                     </tr>
                 </table>
             </td>
             <td colspan="2" align="right" valign="top" style="padding: 0;">
-                <img src="div_1.png" alt="Счастливый пациент"
+                <img src="strangers_1.jpg" alt=""
                      style="display: block; width: 100%; height: 100%; object-fit: cover;">
             </td>
         </tr>
 
-        <!-- РЯД 5: две ячейки — "Новые возможности" + объединённая "Преимущества и Результат" -->
+        <!-- РЯД 5: две ячейки -->
         <tr height="150">
-            <td background="div_2.png" valign="middle" align="center" style="min-height: 150px;">
-                <span class="on-bg">Новые возможности</span>
+            <td valign="middle" align="center" 
+                style="min-height: 150px; background-image: url('div_3.png'); background-size: cover; background-position: center;">
             </td>
-            <!-- ← colspan="2": объединяет 2-ю и 3-ю колонки -->
-            <td colspan="2" background="game_over.png" valign="middle" align="center" style="min-height: 150px;">
-                <span class="on-bg">Преимущества и Результат</span>
+            <td colspan="2" valign="middle" align="center" 
+                style="min-height: 150px; background-image: url('location_0.jpg'); background-size: cover; background-position: center;">
             </td>
         </tr>
 

@@ -20,72 +20,79 @@
         </ul>
     </nav>
 
-    <form action="https://www.bing.com/search" method="GET" id="UserEnter" name="UserEnter" target="_blank">
+    <h1 class="pink big thin tagtype" style="text-align: center; font-size: 60px;">Оформление заказа</h1>
 
-        <!-- скрытое поле: отправится, но не показывается пользователю -->
-        <input type="hidden" name="form_type" value="toy_vendetta_order">
-        <input type="hidden" name="source" value="form.html">
+    <!-- ========================================== -->
+    <!-- ФОРМА 1: ЛИЧНЫЕ КОНТАКТНЫЕ ДАННЫЕ          -->
+    <!-- ========================================== -->
+    <div class="content-container center-text" style="margin-bottom: 50px;">
+        <h3 class="purple middle thin gravity">Шаг 1: Ваши контактные данные</h3>
+        
+        <form action="https://www.bing.com/search" method="GET" id="ContactForm" name="ContactForm" target="_blank">
+            <!-- Скрытые поля -->
+            <input type="hidden" name="form_type" value="contact_data">
+            <input type="hidden" name="source" value="form.html">
 
-        <div class="content-container center-text">
+            <p>Фамилия: <input type="text" name="last_name" size="20" value="" required></p>
+            <p>Имя: <input type="text" name="first_name" size="20" value="" required></p>
+            
+            <p>Мобильный телефон: <input type="tel" name="phone" size="20" placeholder="+7 (___) ___-__-__" required></p>
+            <p>Электронная почта: <input type="email" name="email" size="30" placeholder="example@mail.ru" required></p>
+            
+            <p>Дата отправки данных: <input type="date" name="user_date" value="2024-10-02" required></p>
 
-            <p>Поисковый запрос: <input type="text" name="q" size="40" value=""></p>
+            <p style="margin-top: 20px;">
+                <input type="submit" value="Сохранить контакты">
+            </p>
+        </form>
+    </div>
 
-            <p>Фамилия: <input type="text" name="last_name" size="20" value="Неизвестно"></p>
-            <p>Имя:     <input type="text" name="first_name" size="20" value="Неизвестно"></p>
-            <p>Возраст: <input type="number" name="age" size="20" value="0"></p>
+    <!-- ========================================== -->
+    <!-- ФОРМА 2: ОРИГИНАЛЬНЫЕ ДАННЫЕ (ЗАКАЗ)       -->
+    <!-- ========================================== -->
+    <div class="content-container center-text" style="margin-bottom: 50px;">
+        <h3 class="purple middle thin gravity">Шаг 2: Параметры заказа</h3>
 
-            <p>Место проживания:
-                <input type="radio" name="place" value="Moscow">Москва
-                <input type="radio" name="place" value="Nizhny" checked>Нижний
+        <form action="https://www.bing.com/search" method="GET" id="OrderForm" name="OrderForm" target="_blank">
+            <!-- Скрытые поля -->
+            <input type="hidden" name="form_type" value="toy_order">
+            <input type="hidden" name="source" value="form.html">
+
+            <p><b>Какие игрушки вы хотите заказать:</b><br>
+                <input type="checkbox" name="toys" value="bear" checked> Неоновый агнец<br>
+                <input type="checkbox" name="toys" value="robot"> Кот-артист<br>
+                <input type="checkbox" name="toys" value="doll"> Цирковое око<br>
             </p>
 
-            <p><b>Каким браузером в основном пользуетесь:</b><br>
-                <input type="radio" name="browser" value="ie"> Internet Explorer<br>
-                <input type="radio" name="browser" value="opera"> Opera<br>
-                <input type="radio" name="browser" value="firefox"> Firefox<br>
-            </p>
-
-            <p>Комментарий<br>
-                <textarea name="comment" cols="100" rows="10"></textarea>
-            </p>
-
-            <p>Стаж работы:
-                <input type="checkbox" name="experience" value="10" checked>Маркетологом — 10
-                <input type="checkbox" name="experience" value="20" checked>Экономистом — 20
-                <input type="checkbox" name="experience" value="30" checked>Менеджером — 30
-            </p>
-
-            <p>Знание английского
-                <select name="languages">
-                    <option value="Владею свободно">Владею свободно</option>
-                    <option value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</option>
+            <p>Опыт взаимодействия с игровыми автоматами:
+                <select name="skill_level">
+                    <option value="Новичок">Без опыта</option>
+                    <option value="Любитель">Тщетно пытаюсь победить</option>
+                    <option value="Профессионал">Был выигрыш один раз и более</option>
                 </select>
             </p>
 
-            <p>Мобильный телефон: <input type="tel" name="phone" size="20" placeholder="+7 (___) ___-__-__"></p>
-            <p>Электронная почта: <input type="email" name="email" size="30" placeholder="example@mail.ru"></p>
-
-            <p>Дата отправления данных: <input type="date" name="user_date" value="2024-10-02"></p>
-            <p>Уровень: <input type="range" name="range" value="50"></p>
-            <p>Пароль: <input type="password" name="password" size="9" value="123"></p>
-
-            <p>Укажите температуру в градусах Цельсия:
-                <input type="number" name="temperature" min="-50" max="50" value="20">
+            <!-- Оригинальные данные 3: Пожелания к доставке -->
+            <p>Способ доставки:
+                <input type="radio" name="delivery" value="pickup"> Самовывоз из перехода
+                <input type="radio" name="delivery" value="drone" checked> Доставка курьером
             </p>
 
-            <!-- кнопки теперь ВНУТРИ формы — они сработают -->
-            <div class="content-row">
+            <!-- Оригинальные данные 4: Отзыв -->
+            <p>Ваши пожелания или отзыв<br>
+                <textarea name="comment" cols="80" rows="5" placeholder="Напишите, какую игрушку вы бы хотели видеть в автомате..."></textarea>
+            </p>
+
+            <div class="content-row" style="justify-content: center; margin-top: 20px;">
                 <div>
-                    <p><input type="submit" value="Отправить"></p>
+                    <p><input type="submit" value="Оформить заказ"></p>
                 </div>
                 <div>
-                    <p><input type="reset" value="Очистить"></p>
+                    <p><input type="reset" value="Очистить форму"></p>
                 </div>
             </div>
-
-        </div>
-
-    </form>
+        </form>
+    </div>
 
 </body>
 </html>
